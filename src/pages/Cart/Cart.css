@@ -1,0 +1,43 @@
+.cart-panel {
+    position: fixed;
+    right: -500px;
+    max-width: 500px;
+    height: 100vh;
+    background-color: #f8f8f8;
+    z-index: 10;
+    color: #000709;
+    transition: right 0.8s ease-in-out;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.x {
+    display: inline-block;
+    transform-origin: center;
+    font-size: 0.8rem;
+    transition: all 0.8s ease-in-out;
+}
+
+.remove-btn {
+    cursor: pointer;
+}
+
+.remove-btn:hover .x {
+    transform: rotate(450deg);
+}
+
+.product-list {
+    max-height: calc(100vh - 230px);
+    margin: 1rem 0;
+    overflow: auto;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}

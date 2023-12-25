@@ -1,0 +1,11 @@
+label {
+    font-size: 1rem;
+    font-family: 'Oxanium', sans-serif;
+}
+
+input, textarea {
+    width: 100%;
+    border: 1px solid rgb(24 24 24 / 20%);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+}
