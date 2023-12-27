@@ -1,10 +1,19 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import Pouch_Wavy_Curly_01 from "../assets/Pouch_Wavy_Curly_01.png";
 import Smooth_Service_Shampoo_XXL_01 from "../assets/Smooth_Service_Shampoo_XXL_01.png";
 import HydrationfixationconditionerNEW_Square1920 from "../assets/HydrationfixationconditionerNEW_Square1920.png";
 import {Link} from "react-router-dom";
 import productData from '../data/Products.json';
 import {useBasket} from "../hooks/CartContext";
+import rect from "../assets/Rectangle.svg";
+import rect1 from "../assets/Rectangle1.svg";
+import rect2 from "../assets/Rectangle2.svg";
+import rect3 from "../assets/Rectangle3.svg";
+import rect4 from "../assets/Rectangle4.svg";
+import rect5 from "../assets/Rectangle5.svg";
+import Parallax from "./Parallax";
+import ball from "../assets/583f133fa0b6e672a83f306d1dd47507 44 1.png";
+import FlyingBalls from "./FlyingBalls";
 
 const TopProduct = ({title, description, imageSrc, price}) => {
   const [productId, setProductId] = useState({});
@@ -61,13 +70,14 @@ const TopProduct = ({title, description, imageSrc, price}) => {
 export default function TopSales() {
   
   return (
-    <div className="flex flex-col py-20 px-16 max-md:px-8">
+    <div className="flex relative flex-col py-20 px-16 max-md:px-8">
       <div className="self-center w-full">
         <h1 className="gradient-text text-6xl font-bold max-md:text-5xl"
             aria-label="Top Sales">
           Top Sales
         </h1>
-        <div className="flex flex-col">
+        
+        <div className="flex flex-col z-[2] relative">
           <TopProduct
             title="Wavy and Curly Hair Controller"
             description="Achieve hair submission with our revolutionary, long-lasting innovation that exerts control over any texture without causing harm. No safe words required - Hair Controller ensures the safety of color or chemically-treated hair. Exclusively for professional use."

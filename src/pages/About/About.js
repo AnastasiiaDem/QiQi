@@ -4,7 +4,8 @@ import secondImage from "../../assets/qiqiglobal_1697220038_3212837002465628634_
 import thirdImage from "../../assets/qiqiglobal_1697785215_3217578051852152263_27840667923.jpg";
 import fourthImage from "../../assets/qiqiglobal_1688065827_3136045917093885589_27840667923.jpg";
 import fifthImage from "../../assets/qiqiglobal_1702578406_3257786256321562337_27840667923.jpg";
-import Parallax from "../../hooks/Parallax";
+import videoGif from "../../assets/qiqiglobal_1686848579_3125834227890007446_27840667923.gif";
+import Parallax from "../../components/Parallax";
 
 export default function About() {
   return (
@@ -74,7 +75,7 @@ export default function About() {
                className="h-[700px] w-[50%] mr-16 object-cover mt-[-8rem] max-md:w-full max-md:h-[600px]"
                alt='main background'/>
           <img loading="lazy"
-               src='https://drive.google.com/uc?id=1ORazpsj6gfNf2JRr1yRDqRxgV1wmUY68'
+               src={videoGif}
                className="object-cover object-center h-[500px] mt-8 ml-16 max-md:w-full"
                alt="gif"/>
         </div>

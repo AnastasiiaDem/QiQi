@@ -81,7 +81,7 @@ export default function Cart() {
           </div>
         
         ) : (
-          <div className="flex flex-col items-center center">
+          <div className="flex flex-col items-center w-full center">
             <p className="Syne font-bold text-2xl">Your cart is empty &nbsp;</p>
             <img src={sadSmile} className="w-[20px]" alt="Sad Smile"/>
           </div>

@@ -1,47 +1,51 @@
-import React from "react";
-import main_background from "../../assets/3a627ce5fc85e0ec7f8270faa476649b81bb9237-8032x5357.jpg";
+import React, {useEffect, useState} from "react";
 import TopSales from "../../components/TopSales";
 import Ethos from "../../components/Ethos";
 import JoinUs from "../../components/JoinUs";
 import {Link} from "react-router-dom";
 
 export default function Main() {
+  const [xArr, setXArr] = useState([...Array(1)]);
   
   const handleScrollTop = () => {
     window.scroll(0, 0);
   };
   
+  useEffect(() => {
+    const arrSize = Math.floor(((window.innerWidth - 12) / 2) / 22.26);
+    setXArr([...Array(arrSize)]);
+  }, []);
+  
+  
   return (
     <>
-      
-      {/*<div className="min-h-[600px] max-h-[800px] w-full relative">*/}
-      {/*/!*  <FlyingBalls/>*!/*/}
-      {/*</div>*/}
-      
-      <div className="slogan">
-        <p className="text-right">Where Science Blends with Cosmic Glow</p>
-        <p className="text-left">Comprehensive Salon Grade Hair Care</p>
+      <div className="main_background relative h-[100vh] w-full object-cover object-center">
+        <div className="slogan gap-12 max-md:gap-4">
+          <p className="text-right">Beyond Limits, Beyond Glow</p>
+          <p className="text-left">Infinite Shine, Infinite Care</p>
+        </div>
       </div>
-      
-      <img loading="lazy" src={main_background}
-           className="min-h-[600px] max-h-[800px] w-full object-cover object-center" alt='main background'/>
       
       <div
         className="bg-[#000709] flex w-full flex-col justify-center items-center max-md:w-full">
         <div className="w-full decorative-container relative">
-          {/*{[...Array(15)].map((_, i) => (*/}
-          {/*  <span key={i} className="decorative-x" style={{top: 15 + 20 * i}}>&#x2715;</span>*/}
-          {/*))}*/}
-          {/*{[...Array(15)].map((_, i) => (*/}
-          {/*  <span key={i} className="decorative-x decorative-x2" style={{top: 15 + 20 * i}}>&#x2715;</span>*/}
-          {/*))}*/}
-          {/*{[...Array(15)].map((_, i) => (*/}
-          {/*  <span key={i} className="decorative-x decorative-x3" style={{top: 15 + 20 * i}}>&#x2715;</span>*/}
-          {/*))}*/}
-          {/*{[...Array(15)].map((_, i) => (*/}
-          {/*  <span key={i} className="decorative-x decorative-x2 decorative-x4" style={{top: 15 + 20 * i}}>&#x2715;</span>*/}
-          {/*))}*/}
-          <div className="gap-5 flex mx-16 my-16 max-md:mx-8 max-md:flex-col max-md:max-md:gap-0">
+          <div className="x-container x-container-top">
+            {xArr.map((_, i) => (
+              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
+            ))}
+            {xArr.map((_, i) => (
+              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
+            ))}
+          </div>
+          <div className="x-container">
+            {xArr.map((_, i) => (
+              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
+            ))}
+            {xArr.map((_, i) => (
+              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
+            ))}
+          </div>
+          <div className="gap-5 flex mx-20 my-20 max-md:mx-8 max-md:flex-col max-md:max-md:gap-0">
             <div className="flex flex-col w-[47%] max-md:w-full max-md:ml-0">
               <h2
                 className="justify-center text-slate-50 text-5xl font-bold max-md:w-full max-md:text-4xl">Sailing

@@ -23,7 +23,7 @@ export default function Header() {
       <Link
         to="/"
         onClick={handleScrollTop}
-        className="logo gradient-text top-8 text-center text-8xl font-bold max-md:top-16 max-md:text-6xl"
+        className="logo text-[#e2d2c5] top-8 text-center text-8xl font-bold max-md:top-16 max-md:text-6xl"
       >
         QiQi
       </Link>

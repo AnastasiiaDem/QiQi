@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 const FlyingBalls = () => {
   const [ballPositions, setBallPositions] = useState(() =>
-    Array.from({length: 500}, (_, index) => ({
+    Array.from({length: 100}, (_, index) => ({
       id: index + 1,
       initialPosition: {
         x: Math.random() * window.innerWidth,
@@ -24,9 +24,7 @@ const FlyingBalls = () => {
       prevPositions.map(({id, initialPosition, position}) => {
         const distance = calculateDistance(hoveredPosition, position);
         
-        // Move the ball if it is close to the hovered position
         if (distance < 100) {
-          // Calculate new position within a smaller range
           const newX = initialPosition.x + Math.random() * 100 - 50;
           const newY = initialPosition.y + Math.random() * 100 - 50;
           
@@ -40,7 +38,6 @@ const FlyingBalls = () => {
           };
         }
         
-        // Otherwise, keep the ball at its current position
         return {id, initialPosition, position};
       })
     );
@@ -57,7 +54,7 @@ const FlyingBalls = () => {
       );
     };
     
-    const timeoutId = setTimeout(resetPositions, 500);
+    const timeoutId = setTimeout(resetPositions, 2000);
     
     return () => clearTimeout(timeoutId);
     
@@ -65,6 +62,7 @@ const FlyingBalls = () => {
   
   return (
     <div
+       className="overflow-hidden"
       onMouseEnter={(e) => {
         handleMouseEnter({x: e.clientX, y: e.clientY});
       }}
@@ -76,6 +74,8 @@ const FlyingBalls = () => {
           src={require('../assets/583f133fa0b6e672a83f306d1dd47507 44.svg').default}
           className="ball"
           style={{
+            height: '50px',
+            width: '50px',
             transform: `translate3d(${position.x}px, ${position.y}px, 0.001px)`,
           }}
           alt={`Flying ball ${id}`}

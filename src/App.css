@@ -5,6 +5,13 @@
     z-index: 11;
 }
 
+.main_background {
+    background-image: url('./assets/3a627ce5fc85e0ec7f8270faa476649b81bb9237-8032x5357.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .header-link {
     font-family: 'Oxanium', sans-serif;
     font-size: 1.3rem;
@@ -17,6 +24,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
+}
+
+.parallax-el {
+    position: absolute;
+    object-fit: cover;
+    width: 50px;
+    z-index: 0;
 }
 
 .qa-width {
@@ -92,10 +106,12 @@
     width: 100%;
     display: flex;
     align-items: flex-end;
-    gap: 3rem;
     font-family: "Syne", sans-serif;
     font-weight: 800;
     justify-content: center;
+    mix-blend-mode: difference;
+    color: #f7f7f7;
+    font-size: 4vw;
 }
 
 .product-container:hover > .discover-btn {
@@ -132,32 +148,73 @@
 .decorative-x {
     display: inline-block;
     transform-origin: center;
-    font-size: 0.8rem;
+    font-size: 15px;
     transition: all 0.8s ease-in-out;
-    position: absolute;
+    line-height: 15px;
     color: #f8fafc;
-    left: 10px;
-}
-
-.decorative-x2 {
-    left: auto;
-    right: 10px;
-}
-
-.decorative-x3 {
-    left: 30px;
-}
-
-.decorative-x4 {
-    right: 30px;
 }
 
 .decorative-container:hover .decorative-x {
     transform: rotate(450deg);
 }
 
-.decorative-container:hover .decorative-x2 {
-    transform: rotate(-450deg);
+.x-container {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    bottom: 0;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+}
+
+.x-container-top {
+    top: 0;
+    bottom: 100%;
+    align-items: flex-end;
+}
+
+.error-container {
+    background-image: url('./assets/aa4237b0f5e7cd0885c2f6cd941b0e28 1.png');
+    filter: invert(1);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh;
+}
+
+.back-link {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    border: 2px dotted rgba(255, 255, 255, 0.01);
+    transition: all 0.5s ease-in-out;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.back-link span {
+    font-size: 1rem;
+}
+
+.back-link:hover {
+    border: 2px dotted #fff;
+    color: #fff;
+}
+
+.oops {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -10%);
+    text-align: center;
 }
 
 @media (max-width: 480px) {
