@@ -1,7 +1,7 @@
 import React from 'react'
 import firstImage from "../../assets/firstImage.jpg";
-import secondImage from "../../assets/qiqiglobal_1697220038_3212837002465628634_27840667923.jpg";
-import thirdImage from "../../assets/qiqiglobal_1697785215_3217578051852152263_27840667923.jpg";
+import secondImage from "../../assets/qiqiglobal_1691575207_3165484724105602070_27840667923.jpg";
+import thirdImage from "../../assets/qiqiglobal_1703532582_3265790461955191878_27840667923.jpg";
 import fourthImage from "../../assets/qiqiglobal_1688065827_3136045917093885589_27840667923.jpg";
 import fifthImage from "../../assets/qiqiglobal_1702578406_3257786256321562337_27840667923.jpg";
 import videoGif from "../../assets/qiqiglobal_1686848579_3125834227890007446_27840667923.gif";
@@ -58,9 +58,13 @@ export default function About() {
           assurance is a testament to our dedication to your hair's well-being.
         </div>
         
-        <div className="overflow-hidden z-[1] mt-12 h-[700px] grid grid-cols-2 grid-rows-1 gap-8 justify-between w-full max-md:gap-4 max-md:h-[400px] max-md:mt-10">
-          <Parallax imageSrc={secondImage} className="h-full w-full"/>
-          <Parallax imageSrc={thirdImage} className="h-full w-full"/>
+        <div className="overflow-hidden z-[1] mt-12 grid grid-cols-2 grid-rows-1 gap-8 justify-between w-full max-md:gap-4 max-md:grid-cols-1 max-md:grid-rows-2 max-md:mt-10">
+          <div className="overflow-hidden z-[1] h-[700px] max-md:h-[500px]">
+            <Parallax imageSrc={secondImage} className="h-full w-full"/>
+          </div>
+          <div className="overflow-hidden z-[1] h-[700px] max-md:h-[500px]">
+            <Parallax imageSrc={thirdImage} className="h-full w-full"/>
+          </div>
         </div>
         
         <div className="text-slate-50 text-3xl pt-24 pr-16 ml-auto w-[70%] mix-blend-difference max-md:text-2xl">
@@ -87,8 +91,8 @@ export default function About() {
           QiQi is not just a brand; it's a lifestyle that encourages you to shine from the inside out.
         </div>
         
-        <div className="overflow-hidden z-[1] w-[40%] h-[500px] ml-auto mr-16 max-md:mt-10">
-          <Parallax imageSrc={fifthImage} className="object-cover"/>
+        <div className="overflow-hidden z-[1] w-[40%] h-[600px] ml-auto mr-16 max-md:mr-auto max-md:w-[70%] max-md:mt-10">
+          <img loading="lazy" src={fifthImage} className="object-cover object-left h-[600px]" alt=''/>
         </div>
         
         <div

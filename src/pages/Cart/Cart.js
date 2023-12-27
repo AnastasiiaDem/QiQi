@@ -1,7 +1,7 @@
 import React from 'react';
 import {useBasket, useBasketProducts} from '../../hooks/CartContext';
 import productData from '../../data/Products.json';
-import sadSmile from '../../assets/Sad.svg';
+import sadSmile from '../../assets/Sad.png';
 import './Cart.css';
 
 export default function Cart() {

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 const FlyingBalls = () => {
   const [ballPositions, setBallPositions] = useState(() =>
-    Array.from({length: 100}, (_, index) => ({
+    Array.from({length: 400}, (_, index) => ({
       id: index + 1,
       initialPosition: {
         x: Math.random() * window.innerWidth,
@@ -62,7 +62,6 @@ const FlyingBalls = () => {
   
   return (
     <div
-       className="overflow-hidden"
       onMouseEnter={(e) => {
         handleMouseEnter({x: e.clientX, y: e.clientY});
       }}
@@ -74,8 +73,8 @@ const FlyingBalls = () => {
           src={require('../assets/583f133fa0b6e672a83f306d1dd47507 44.svg').default}
           className="ball"
           style={{
-            height: '50px',
-            width: '50px',
+            height: '30px',
+            width: '30px',
             transform: `translate3d(${position.x}px, ${position.y}px, 0.001px)`,
           }}
           alt={`Flying ball ${id}`}

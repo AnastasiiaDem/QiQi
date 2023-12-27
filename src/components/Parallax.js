@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Parallax = ({ imageSrc, className, height, position }) => {
+const Parallax = ({ imageSrc, className }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   
   useEffect(() => {
@@ -23,8 +23,8 @@ const Parallax = ({ imageSrc, className, height, position }) => {
       style={{
         backgroundImage: `url(${imageSrc})`,
         backgroundSize: 'cover',
-        backgroundPosition: position || 'top',
-        height: height || '1000px',
+        backgroundPosition: 'top',
+        height: '1000px',
         transform: `translateY(${translateY}px)`,
         transition: 'transform 0.5s ease-out',
       }}

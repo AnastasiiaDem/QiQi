@@ -1,23 +1,14 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Pouch_Wavy_Curly_01 from "../assets/Pouch_Wavy_Curly_01.png";
 import Smooth_Service_Shampoo_XXL_01 from "../assets/Smooth_Service_Shampoo_XXL_01.png";
 import HydrationfixationconditionerNEW_Square1920 from "../assets/HydrationfixationconditionerNEW_Square1920.png";
 import {Link} from "react-router-dom";
 import productData from '../data/Products.json';
 import {useBasket} from "../hooks/CartContext";
-import rect from "../assets/Rectangle.svg";
-import rect1 from "../assets/Rectangle1.svg";
-import rect2 from "../assets/Rectangle2.svg";
-import rect3 from "../assets/Rectangle3.svg";
-import rect4 from "../assets/Rectangle4.svg";
-import rect5 from "../assets/Rectangle5.svg";
-import Parallax from "./Parallax";
-import ball from "../assets/583f133fa0b6e672a83f306d1dd47507 44 1.png";
-import FlyingBalls from "./FlyingBalls";
 
 const TopProduct = ({title, description, imageSrc, price}) => {
   const [productId, setProductId] = useState({});
-  const { addItem } = useBasket();
+  const {addItem} = useBasket();
   
   const handleScrollTop = () => {
     window.scroll(0, 0);
@@ -25,7 +16,7 @@ const TopProduct = ({title, description, imageSrc, price}) => {
   
   const handleAddProduct = (e) => {
     e.preventDefault();
-    addItem({ id: productId, quantity: 1 });
+    addItem({id: productId, quantity: 1});
   };
   
   

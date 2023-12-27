@@ -12,6 +12,7 @@ export default function InDetails() {
   const { addItem } = useBasket();
   
   useEffect(() => {
+    window.scroll(0, 0);
     const selectedProduct = productData.find((p) => p.id === productId);
     setProduct(selectedProduct);
     setProductImageSrc(selectedProduct?.imageSrc || "");

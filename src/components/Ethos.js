@@ -26,7 +26,7 @@ export default function Ethos() {
             </h2>
           </div>
         </section>
-        <section className="bg-[#000709] p-16 max-md:px-5">
+        <section id="FAQ" className="bg-[#000709] p-16 max-md:px-5">
           <h2 className="gradient-text text-5xl font-bold max-md:text-4xl">Queries from the Space</h2>
           <div className="flex flex-wrap mx-auto my-16 w-[80%] gap-16 max-md:flex-col max-md:mt-10">
             <QaItem
