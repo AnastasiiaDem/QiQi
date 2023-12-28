@@ -8,7 +8,7 @@ export default function JoinUs() {
   };
   
   return (
-    <div className="bg-[#000709] flex w-full flex-col justify-center items-center p-16 max-md:w-full max-md:px-5">
+    <div className="bg-[#030303] flex w-full flex-col justify-center items-center p-16 max-md:w-full max-md:px-5">
       <h1 className="gradient-text text-5xl font-bold max-md:text-4xl">Join Us</h1>
       <p className="text-slate-50 text-center mt-10 max-w-[500px]">
         QiQi Hair Care — Unleashing Cosmic Radiance <br/>

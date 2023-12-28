@@ -26,7 +26,7 @@ export default function Product({imageSrc, gifSrc, altText, name, price, id}) {
         <p className="Oxanium">${price}</p>
       </div>
       <Link to={`/info/${id}`} onClick={handleScrollTop}
-            className="discover-btn w-full h-[50px] text-[#000709] Syne text-center text-sm px-3.5 py-4 hover:text-[#f1f1ee] hover:bg-[#000709]">
+            className="discover-btn w-full h-[50px] text-[#030303] Syne text-center text-sm px-3.5 py-4 hover:text-[#f1f1ee] hover:bg-[#030303]">
         Learn more
       </Link>
     </div>

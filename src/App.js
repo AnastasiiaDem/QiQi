@@ -14,7 +14,7 @@ function App() {
   const isKnownRoute = knownRoutes.some(route => location.pathname === route || location.pathname.startsWith("/info/"));
   
   return (
-    <div style={{overflow: isKnownRoute ? 'auto' : 'hidden'}} className="flex flex-col bg-white text-[#000709]">
+    <div style={{overflow: isKnownRoute ? 'auto' : 'hidden'}} className="flex flex-col bg-white text-[#030303]">
       <BasketProvider>
         {isKnownRoute && <Header />}
         <Routing />
