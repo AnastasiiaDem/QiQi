@@ -55,9 +55,7 @@ export default function InDetails() {
             </button>
           </div>
           <button onClick={handleAddProduct}
-            className="justify-center w-full mt-8 text-slate-50 text-center text-sm bg-neutral-500 px-3.5 py-4 rounded-lg hover:bg-[#000709]"
-            aria-label="Add to cart"
-          >
+            className="justify-center w-full mt-8 text-slate-50 text-center text-sm bg-neutral-500 px-3.5 py-4 rounded-lg hover:bg-[#030303]">
             Add to cart
           </button>
         </div>

@@ -63,14 +63,14 @@
 
 .filter-item {
     border-radius: 20px;
-    border: 1px solid #000709;
+    border: 1px solid #030303;
     padding: 0.25rem 1rem;
     width: fit-content;
 }
 
 .active-filter-item {
     border-radius: 20px;
-    border: 1px solid #000709;
+    border: 1px solid #030303;
     padding: 0.25rem 1rem;
     width: fit-content;
     background: rgba(24, 24, 24, 0.8);
@@ -90,7 +90,7 @@
     bottom: 0;
     transition: all 0.3s ease-in-out;
     background: #f1f1ee;
-    color: #000709;
+    color: #030303;
     border-radius: 0;
 }
 
@@ -135,7 +135,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #000709;
+    background: #030303;
     border-radius: 10px;
     border: 3px solid #fff;
 }
@@ -190,7 +190,7 @@
     left: 10px;
     bottom: 10px;
     border-radius: 10px;
-    border: 2px dotted #181818;
+    border: 2px dotted #030303;
     transition: all 0.5s ease-in-out;
     padding: 0.5rem 0.8rem;
     display: flex;
@@ -208,7 +208,7 @@
 .back-link:hover {
     border: 2px dotted #fff;
     color: #fff;
-    background: #181818;
+    background: #030303;
 }
 
 .oops {
@@ -220,7 +220,7 @@
     text-align: center;
     font-weight: 200;
     background: #fff;
-    border: 2px dotted #181818;
+    border: 2px dotted #030303;
     border-radius: 10px;
     padding: 1rem 2rem;
     transition: all 0.5s ease-in-out;
@@ -229,7 +229,28 @@
 .oops:hover {
     border: 2px dotted #fff;
     color: #fff;
-    background: #181818;
+    background: #030303;
+}
+
+.spinner {
+    /*background-image: url('./assets/');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sphereAOS {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.ethos-container {
+    background-image: url('./assets/hero.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 @media (max-width: 480px) {

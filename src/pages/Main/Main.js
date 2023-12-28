@@ -1,20 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import TopSales from "../../components/TopSales";
 import Ethos from "../../components/Ethos";
 import JoinUs from "../../components/JoinUs";
 import {Link} from "react-router-dom";
 
 export default function Main() {
-  const [xArr, setXArr] = useState([...Array(1)]);
+  // const [xArr, setXArr] = useState([...Array(1)]);
   
   const handleScrollTop = () => {
     window.scroll(0, 0);
   };
   
-  useEffect(() => {
-    const arrSize = Math.floor(((window.innerWidth - 12) / 2) / 22.26);
-    setXArr([...Array(arrSize)]);
-  }, []);
+  // useEffect(() => {
+  //   const arrSize = Math.floor(((window.innerWidth - 12) / 2) / 22.26);
+  //   setXArr([...Array(arrSize)]);
+  // }, []);
   
   
   return (
@@ -27,25 +27,25 @@ export default function Main() {
       </div>
       
       <div
-        className="bg-[#000709] flex w-full flex-col justify-center items-center max-md:w-full">
+        className="bg-[#030303] flex w-full flex-col justify-center items-center max-md:w-full">
         <div className="w-full decorative-container relative">
-          <div className="x-container x-container-top">
-            {xArr.map((_, i) => (
-              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
-            ))}
-            {xArr.map((_, i) => (
-              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
-            ))}
-          </div>
-          <div className="x-container">
-            {xArr.map((_, i) => (
-              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
-            ))}
-            {xArr.map((_, i) => (
-              <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>
-            ))}
-          </div>
-          <div className="gap-5 flex mx-20 my-20 max-md:mx-8 max-md:flex-col max-md:max-md:gap-0">
+          {/*<div className="x-container x-container-top">*/}
+          {/*  {xArr.map((_, i) => (*/}
+          {/*    <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>*/}
+          {/*  ))}*/}
+          {/*  {xArr.map((_, i) => (*/}
+          {/*    <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>*/}
+          {/*  ))}*/}
+          {/*</div>*/}
+          {/*<div className="x-container">*/}
+          {/*  {xArr.map((_, i) => (*/}
+          {/*    <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>*/}
+          {/*  ))}*/}
+          {/*  {xArr.map((_, i) => (*/}
+          {/*    <span key={i} className="decorative-x" style={{left: 20 * i}}>&#x2715;</span>*/}
+          {/*  ))}*/}
+          {/*</div>*/}
+          <div className="gap-5 flex mx-20 my-32 max-md:mx-8 max-md:flex-col max-md:max-md:gap-0">
             <div className="flex flex-col w-[47%] max-md:w-full max-md:ml-0">
               <h2
                 className="justify-center text-slate-50 text-5xl font-bold max-md:w-full max-md:text-4xl">Sailing

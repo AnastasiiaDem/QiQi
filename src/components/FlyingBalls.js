@@ -70,7 +70,7 @@ const FlyingBalls = () => {
       {ballPositions.map(({id, position}) => (
         <img
           key={id}
-          src={require('../assets/583f133fa0b6e672a83f306d1dd47507 44.svg').default}
+          src={require('../assets/583f133fa0b6e672a83f306d1dd4750744.svg').default}
           className="ball"
           style={{
             height: '30px',
