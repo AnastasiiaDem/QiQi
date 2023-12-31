@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import productData from '../../data/Products.json';
 import {useBasket} from "../../hooks/CartContext";
-import Lenis from "@studio-freight/lenis";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 export default function InDetails() {
   const {productId} = useParams();
@@ -12,22 +12,9 @@ export default function InDetails() {
   
   const {addItem} = useBasket();
   
+  useScrollToTop();
   
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 3,
-    });
-    
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    
-    requestAnimationFrame(raf);
-    
-    lenis.scrollTo('#top');
-    
-    
     const selectedProduct = productData.find((p) => p.id === productId);
     setProduct(selectedProduct);
     setProductImageSrc(selectedProduct?.imageSrc || "");

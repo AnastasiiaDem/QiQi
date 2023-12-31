@@ -42,3 +42,26 @@
 .hover-underline-animation:hover::before {
   width: 100%;
 }
+
+.stickyMask {
+  display: flex;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/e0ca5c5387a0175e8ffe963b1a03fa8b5024586f-4320x2700.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 20px solid #fff;
+  border-radius: 40px;
+
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    width: 80%;
+  }
+}

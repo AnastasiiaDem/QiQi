@@ -24,7 +24,7 @@ export default function Header() {
       </Link>
       
       <header
-        className="fixed z-10 top-0 mix-blend-difference overflow-hidden flex w-full items-center gap-5 p-8 justify-between text-slate-50 max-md:w-full max-md:flex-wrap max-md:px-5">
+        className="fixed z-10 top-0 mix-blend-difference overflow-hidden flex w-full items-center gap-5 px-[37px] py-[32px] justify-between text-slate-50 max-md:w-full max-md:flex-wrap max-md:px-5">
         <nav className="relative flex justify-between gap-5 max-md:justify-center">
           <Link to="/shop" className="header-link">
             Shop

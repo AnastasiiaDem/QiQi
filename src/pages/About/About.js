@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import "./About.scss";
 import firstImage from "../../assets/firstImage.jpg";
 import secondImage from "../../assets/qiqiglobal_1691575207_3165484724105602070_27840667923.jpg";
@@ -7,24 +7,11 @@ import fourthImage from "../../assets/qiqiglobal_1688065827_3136045917093885589_
 import fifthImage from "../../assets/qiqiglobal_1702578406_3257786256321562337_27840667923.jpg";
 import videoGif from "../../assets/qiqiglobal_1686848579_3125834227890007446_27840667923.gif";
 import Parallax from "../../components/Parallax";
-import Lenis from "@studio-freight/lenis";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 export default function About() {
   
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 3,
-    });
-    
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    
-    requestAnimationFrame(raf);
-    
-    lenis.scrollTo('#top');
-  }, []);
+  useScrollToTop();
   
   return (
     <div className="py-20 relative">

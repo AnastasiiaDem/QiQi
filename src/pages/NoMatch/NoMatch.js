@@ -1,31 +1,17 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './NoMatch.scss';
 import {Link} from 'react-router-dom';
 import FlyingBalls from "../../components/FlyingBalls";
-import Lenis from "@studio-freight/lenis";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 
 export default function NoMatch() {
   
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 3,
-    });
-    
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    
-    requestAnimationFrame(raf);
-    
-    lenis.scrollTo('#top');
-  }, []);
-  
+  useScrollToTop();
   
   return (
     <div className="cursor-pointer max-h-[100vh] Syne">
-      <FlyingBalls />
+      <FlyingBalls/>
       <p className="oops">
         Oops! It seems like you've taken a wrong turn.
         <br/>

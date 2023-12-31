@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './Contacts.css';
 import ContactForm from "../../components/ContactForm";
-import Lenis from "@studio-freight/lenis";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 export default function Contacts() {
   
@@ -10,23 +10,11 @@ export default function Contacts() {
     alert("Message sent!");
   };
   
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 3,
-    });
-    
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    
-    requestAnimationFrame(raf);
-    
-    lenis.scrollTo('#top');
-  }, []);
+  useScrollToTop();
   
   return (
-    <div className="flex justify-between items-center gap-[5rem] py-20 px-16 mt-[5rem] bg-white max-md:gap-4 max-md:flex-col max-md:px-8">
+    <div
+      className="flex justify-between items-center gap-[5rem] py-20 px-16 mt-[5rem] bg-white max-md:gap-4 max-md:flex-col max-md:px-8">
       <div className="flex flex-col mt-[-2rem] text-center w-[40%] max-md:mt-0 max-md:w-full max-md:ml-0">
         <h4 className="text-3xl font-bold max-md:w-full">
           Get in touch

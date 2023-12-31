@@ -3,6 +3,7 @@ import './Cart.scss';
 import {useBasket, useBasketProducts} from '../../hooks/CartContext';
 import productData from '../../data/Products.json';
 import sadSmile from '../../assets/Sad.png';
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 export default function Cart() {
   const {toggleCart, removeItem, updateItem} = useBasket();
@@ -18,6 +19,8 @@ export default function Cart() {
     updateItem({id: item.product.id, quantity: updatedQuantity});
   };
   
+  useScrollToTop();
+  
   return (
     <div className={`cart-panel w-[50%] h-screen p-4 max-md:w-full ${isOpen ? 'open' : ''}`}>
       <div className={`w-full h-full ${totalQuantity > 0 ? 'flex flex-col' : ''}`}>
@@ -27,7 +30,7 @@ export default function Cart() {
         </button>
         {totalQuantity > 0 ? (
           <div className="flex flex-col h-full w-full justify-between">
-            <div className="product-list">
+            <div className="product-list lenis lenis-smooth">
               {items.map((item) => (
                 <div key={item.product.id} className="flex w-full gap-4 mt-8 p-[1px] first:mt-0">
                   <img

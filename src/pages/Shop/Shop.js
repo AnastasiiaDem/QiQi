@@ -2,26 +2,15 @@ import React, {useEffect, useState} from 'react';
 import './Shop.scss';
 import Product from '../../components/Product';
 import productData from '../../data/Products.json';
-import Lenis from "@studio-freight/lenis";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 export default function Shop() {
   const [filterParam, setFilterParam] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(productData);
   
+  useScrollToTop();
+  
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 3,
-    });
-    
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    
-    requestAnimationFrame(raf);
-    
-    lenis.scrollTo('#top');
-    
     if (filterParam) {
       const filtered = productData.filter((product) =>
         product.type.toLowerCase().includes(filterParam.toLowerCase())
