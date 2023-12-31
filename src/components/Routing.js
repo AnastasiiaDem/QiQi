@@ -7,7 +7,6 @@ import Contacts from "../pages/Contacts/Contacts";
 import Cart from "../pages/Cart/Cart";
 import NoMatch from "../pages/NoMatch/NoMatch";
 import InDetails from "../pages/InDetails/InDetails";
-import CheckoutInfo from "../pages/Checkout/CheckoutInfo";
 
 export default function Routing() {
   return (
@@ -17,7 +16,6 @@ export default function Routing() {
       <Route path="/about" element={<About />} />
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/checkout" element={<CheckoutInfo />}/>
       <Route path="/info/:productId" element={<InDetails />} />
       <Route path="*" element={<NoMatch />} />
     </Routes>

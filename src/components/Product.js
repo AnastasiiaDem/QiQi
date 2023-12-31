@@ -1,12 +1,8 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 
 
 export default function Product({imageSrc, gifSrc, altText, name, price, id}) {
-  
-  const handleScrollTop = () => {
-    window.scroll(0, 0);
-  };
   
   return (
     <div className="product-container relative items-center flex gap-4 flex-col m-4 max-md:mt-10">
@@ -25,8 +21,8 @@ export default function Product({imageSrc, gifSrc, altText, name, price, id}) {
         <p className="Syne">{name}</p>
         <p className="Oxanium">${price}</p>
       </div>
-      <Link to={`/info/${id}`} onClick={handleScrollTop}
-            className="discover-btn w-full h-[50px] text-[#030303] Syne text-center text-sm px-3.5 py-4 hover:text-[#f1f1ee] hover:bg-[#030303]">
+      <Link to={`/info/${id}`}
+            className="discover-btn w-full h-[50px] text-[#000] Syne text-center text-sm px-3.5 py-4 hover:text-[#f1f1ee] hover:bg-[#000]">
         Learn more
       </Link>
     </div>

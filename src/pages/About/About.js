@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect} from 'react';
+import "./About.scss";
 import firstImage from "../../assets/firstImage.jpg";
 import secondImage from "../../assets/qiqiglobal_1691575207_3165484724105602070_27840667923.jpg";
 import thirdImage from "../../assets/qiqiglobal_1703532582_3265790461955191878_27840667923.jpg";
@@ -6,8 +7,25 @@ import fourthImage from "../../assets/qiqiglobal_1688065827_3136045917093885589_
 import fifthImage from "../../assets/qiqiglobal_1702578406_3257786256321562337_27840667923.jpg";
 import videoGif from "../../assets/qiqiglobal_1686848579_3125834227890007446_27840667923.gif";
 import Parallax from "../../components/Parallax";
+import Lenis from "@studio-freight/lenis";
 
 export default function About() {
+  
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 3,
+    });
+    
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    
+    requestAnimationFrame(raf);
+    
+    lenis.scrollTo('#top');
+  }, []);
+  
   return (
     <div className="py-20 relative">
       <div className="text-3xl pt-[10rem] pb-16 px-16 w-[90%] max-md:text-2xl">
@@ -47,7 +65,7 @@ export default function About() {
         </div>
       </div>
       
-      <div className="overflow-hidden z-[1] mt-12 h-[700px]">
+      <div className="about-image overflow-hidden z-[1] mt-12 h-[700px]">
         <Parallax imageSrc={firstImage} className="w-full object-cover"/>
       </div>
       
@@ -58,7 +76,8 @@ export default function About() {
           assurance is a testament to our dedication to your hair's well-being.
         </div>
         
-        <div className="overflow-hidden z-[1] mt-12 grid grid-cols-2 grid-rows-1 gap-8 justify-between w-full max-md:gap-4 max-md:grid-cols-1 max-md:grid-rows-2 max-md:mt-10">
+        <div
+          className="overflow-hidden z-[1] mt-12 grid grid-cols-2 grid-rows-1 gap-8 justify-between w-full max-md:gap-4 max-md:grid-cols-1 max-md:grid-rows-2 max-md:mt-10">
           <div className="overflow-hidden z-[1] h-[700px] max-md:h-[500px]">
             <Parallax imageSrc={secondImage} className="h-full w-full"/>
           </div>
@@ -76,12 +95,10 @@ export default function About() {
         
         <div className="flex justify-between items-end max-md:flex-wrap">
           <img loading="lazy" src={fourthImage}
-               className="h-[700px] w-[50%] mr-16 object-cover mt-[-8rem] max-md:w-full max-md:h-[600px]"
-               alt='main background'/>
+               className="h-[700px] w-[50%] mr-16 object-cover mt-[-8rem] max-md:w-full max-md:h-[600px]" alt=''/>
           <img loading="lazy"
                src={videoGif}
-               className="object-cover object-center h-[500px] mt-8 ml-16 max-md:w-full"
-               alt="gif"/>
+               className="object-cover object-center h-[500px] mt-8 ml-16 max-md:w-full" alt=''/>
         </div>
         
         <div className="text-3xl py-32 px-16 max-md:text-2xl">
@@ -91,7 +108,8 @@ export default function About() {
           QiQi is not just a brand; it's a lifestyle that encourages you to shine from the inside out.
         </div>
         
-        <div className="overflow-hidden z-[1] w-[40%] h-[600px] ml-auto mr-16 max-md:mr-auto max-md:w-[70%] max-md:mt-10">
+        <div
+          className="overflow-hidden z-[1] w-[40%] h-[600px] ml-auto mr-16 max-md:mr-auto max-md:w-[70%] max-md:mt-10">
           <img loading="lazy" src={fifthImage} className="object-cover object-left h-[600px]" alt=''/>
         </div>
         

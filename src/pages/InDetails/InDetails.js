@@ -1,18 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
 import productData from '../../data/Products.json';
 import {useBasket} from "../../hooks/CartContext";
+import Lenis from "@studio-freight/lenis";
 
 export default function InDetails() {
-  const { productId } = useParams();
+  const {productId} = useParams();
   const [product, setProduct] = useState({});
   const [productImageSrc, setProductImageSrc] = useState("");
   const [quantity, setQuantity] = useState(1);
   
-  const { addItem } = useBasket();
+  const {addItem} = useBasket();
+  
   
   useEffect(() => {
-    window.scroll(0, 0);
+    const lenis = new Lenis({
+      duration: 3,
+    });
+    
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    
+    requestAnimationFrame(raf);
+    
+    lenis.scrollTo('#top');
+    
+    
     const selectedProduct = productData.find((p) => p.id === productId);
     setProduct(selectedProduct);
     setProductImageSrc(selectedProduct?.imageSrc || "");
@@ -24,7 +39,7 @@ export default function InDetails() {
   
   const handleAddProduct = (e) => {
     e.preventDefault();
-    addItem({ id: productId, quantity: quantity });
+    addItem({id: productId, quantity: quantity});
   };
   
   return (
@@ -55,7 +70,7 @@ export default function InDetails() {
             </button>
           </div>
           <button onClick={handleAddProduct}
-            className="justify-center w-full mt-8 text-slate-50 text-center text-sm bg-neutral-500 px-3.5 py-4 rounded-lg hover:bg-[#030303]">
+                  className="justify-center w-full mt-8 text-slate-50 text-center text-sm bg-neutral-500 px-3.5 py-4 rounded-lg hover:bg-[#000]">
             Add to cart
           </button>
         </div>

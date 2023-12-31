@@ -1,5 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react';
+import './Contacts.css';
 import ContactForm from "../../components/ContactForm";
+import Lenis from "@studio-freight/lenis";
 
 export default function Contacts() {
   
@@ -7,6 +9,21 @@ export default function Contacts() {
     console.log(e, "Form submitted!");
     alert("Message sent!");
   };
+  
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 3,
+    });
+    
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    
+    requestAnimationFrame(raf);
+    
+    lenis.scrollTo('#top');
+  }, []);
   
   return (
     <div className="flex justify-between items-center gap-[5rem] py-20 px-16 mt-[5rem] bg-white max-md:gap-4 max-md:flex-col max-md:px-8">

@@ -1,8 +1,8 @@
 import React from 'react';
+import './Cart.scss';
 import {useBasket, useBasketProducts} from '../../hooks/CartContext';
 import productData from '../../data/Products.json';
 import sadSmile from '../../assets/Sad.png';
-import './Cart.css';
 
 export default function Cart() {
   const {toggleCart, removeItem, updateItem} = useBasket();
@@ -22,7 +22,7 @@ export default function Cart() {
     <div className={`cart-panel w-[50%] h-screen p-4 max-md:w-full ${isOpen ? 'open' : ''}`}>
       <div className={`w-full h-full ${totalQuantity > 0 ? 'flex flex-col' : ''}`}>
         <button onClick={handleToggleCart}
-                className="Oxanium justify-center w-fit text-slate-50 text-center text-sm bg-neutral-500 py-[5px] px-[10px] hover:bg-[#030303]">
+                className="Oxanium justify-center w-fit text-slate-50 text-center text-sm bg-neutral-500 py-[5px] px-[10px] hover:bg-[#000]">
           &#x2715; &nbsp; Cart ({totalQuantity})
         </button>
         {totalQuantity > 0 ? (
@@ -74,7 +74,7 @@ export default function Cart() {
                 <p className="Oxanium">${totalPrice}</p>
               </div>
               <button onClick={() => toggleCart()}
-                      className="block justify-center w-full mt-4 text-slate-50 text-center text-sm bg-neutral-500 py-[5px] px-[10px] hover:bg-[#030303]">
+                      className="block justify-center w-full mt-4 text-slate-50 text-center text-sm bg-neutral-500 py-[5px] px-[10px] hover:bg-[#000]">
                 CHECKOUT
               </button>
             </div>

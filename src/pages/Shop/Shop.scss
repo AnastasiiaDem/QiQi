@@ -1,0 +1,36 @@
+.filter-item {
+  border-radius: 20px;
+  border: 1px solid #000;
+  padding: 0.25rem 1rem;
+  width: fit-content;
+}
+
+.active-filter-item {
+  border-radius: 20px;
+  border: 1px solid #000;
+  padding: 0.25rem 1rem;
+  width: fit-content;
+  background: rgba(24, 24, 24, 0.8);
+  color: #f7f7f7;
+}
+
+.product-gif {
+  display: none;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.discover-btn {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  background: #f1f1ee;
+  color: #000;
+  border-radius: 0;
+}
+
+.img-container:hover > .product-gif {
+  display: block;
+}

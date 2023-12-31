@@ -23,7 +23,7 @@ const Parallax = ({ imageSrc, className, height, speed }) => {
       style={{
         backgroundImage: `url(${imageSrc})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'top',
+        backgroundPosition: 'center',
         height: height || '1000px',
         transform: `translateY(${translateY}px)`,
         transition: 'transform 0.5s ease-out',

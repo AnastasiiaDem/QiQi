@@ -5,12 +5,12 @@
     height: 100vh;
     background-color: #f8f8f8;
     z-index: 10;
-    color: #030303;
+    color: #000;
     transition: right 0.8s ease-in-out;
-}
 
-.cart-panel.open {
-    right: 0;
+    .open {
+        right: 0;
+    }
 }
 
 .x {
@@ -32,11 +32,4 @@
     max-height: calc(100vh - 230px);
     margin: 1rem 0;
     overflow: auto;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

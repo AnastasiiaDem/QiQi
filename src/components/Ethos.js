@@ -15,7 +15,7 @@ export default function Ethos() {
   return (
     <div className="flex flex-col">
       <section
-        className="items-start bg-[#030303] flex w-full flex-col px-16 py-12 max-md:w-full max-md:px-5">
+        className="items-start bg-[#000] flex w-full flex-col px-16 py-12 max-md:w-full max-md:px-5">
         <div
           className="flex w-[50%] flex-col ml-20 mt-14 mb-11 max-md:w-full max-md:ml-2.5 max-md:my-10">
           <h1 className="gradient-text text-3xl">Our Ethos</h1>
@@ -26,7 +26,7 @@ export default function Ethos() {
           </h2>
         </div>
       </section>
-      <section id="FAQ" className="ethos-container p-16 max-md:px-5">
+      <section id="FAQ" className="bg-[#000] p-16 max-md:px-5">
         <h2 className="gradient-text text-5xl font-bold max-md:text-4xl">Queries from the Space</h2>
         <div className="flex flex-wrap mx-auto my-16 w-[80%] gap-16 max-md:flex-col max-md:mt-10">
           <QaItem

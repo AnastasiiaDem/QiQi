@@ -9,21 +9,16 @@ export default function Header() {
   
   const {totalQuantity} = useBasketProducts(productData);
   
-  const handleScrollTop = () => {
-    window.scroll(0, 0);
-  };
-  
   const handleToggleCart = (e) => {
     e.preventDefault();
     toggleCart();
   };
   
   return (
-    <>
+    <div id="top">
       <Link
         to="/"
-        onClick={handleScrollTop}
-        className="logo text-[#e2d2c5] top-8 text-center text-8xl font-bold max-md:top-16 max-md:text-6xl"
+        className="logo top-8 z-0 text-center text-6xl font-extrabold max-md:top-16 max-md:text-6xl"
       >
         QiQi
       </Link>
@@ -31,13 +26,13 @@ export default function Header() {
       <header
         className="fixed z-10 top-0 mix-blend-difference overflow-hidden flex w-full items-center gap-5 p-8 justify-between text-slate-50 max-md:w-full max-md:flex-wrap max-md:px-5">
         <nav className="relative flex justify-between gap-5 max-md:justify-center">
-          <Link to="/shop" onClick={handleScrollTop} className="header-link">
+          <Link to="/shop" className="header-link">
             Shop
           </Link>
-          <Link to="/about" onClick={handleScrollTop} className="header-link">
+          <Link to="/about" className="header-link">
             About
           </Link>
-          <Link to="/contacts" onClick={handleScrollTop} className="header-link">
+          <Link to="/contacts" className="header-link">
             Contacts
           </Link>
         </nav>
@@ -47,6 +42,6 @@ export default function Header() {
       </header>
       
       <Cart/>
-    </>
+    </div>
   );
 }

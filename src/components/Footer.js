@@ -1,7 +1,7 @@
 import React from "react";
 import Instagram from "../assets/Instagram.png";
 import Facebook from "../assets/Facebook.png";
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 import sphere from "../assets/sphere-unscreen.gif";
 
 const navText = "text-slate-50 mb-3";
@@ -9,7 +9,7 @@ const navUndertext = "text-slate-50 opacity-60 mt-1 hover:text-slate-400";
 
 export default function Footer() {
   return (
-    <div className="bg-[#030303] flex w-full flex-col justify-center items-center max-md:w-full max-md:px-5">
+    <div className="bg-[#000] flex w-full flex-col justify-center items-center max-md:w-full max-md:px-5">
       <section className="grid grid-cols-4 grid-rows-1 w-[80%] pb-5 px-16 pt-20 justify-between gap-4 max-md:grid-cols-2 max-md:grid-rows-2 max-md:mt-10 max-md:px-5 max-md:w-full">
         <div className="flex flex-col">
           <p className={navText}>Products</p>
@@ -36,7 +36,7 @@ export default function Footer() {
       </section>
       <footer className="flex flex-col items-center mt-24 p-16 max-md:mt-10 max-md:px-5">
         <div className="flex gap-4">
-          <Link to='#' className="w-8 hover:mix-blend-overlay">
+          <Link to='#' className="w-8 hover:opacity-50">
             <img
               loading="lazy"
               src={Instagram}
@@ -44,7 +44,7 @@ export default function Footer() {
               alt="Instagram"
             />
           </Link>
-          <Link to='#' className="w-8 hover:mix-blend-overlay">
+          <Link to='#' className="w-8 hover:opacity-50">
             <img
               loading="lazy"
               src={Facebook}

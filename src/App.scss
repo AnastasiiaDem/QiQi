@@ -1,0 +1,70 @@
+.header-link {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 1.3rem;
+    text-transform: lowercase;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #b88eedff, #a068e7ff, #945be5ff, #884ee2ff, #6d3cd7ff, #5531b5ff, #41268dff, #2c1b65ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+
+.qa-width {
+    width: calc(50% - 2rem);
+}
+
+.product-container:hover > .discover-btn {
+    display: block;
+}
+
+.ball {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.spinner {
+    /*background-image: url('./assets/');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 480px) {
+    .header-link {
+        font-size: 1rem;
+    }
+
+    .qa-width {
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+
+}
+
+@media (min-width: 1440px) {
+
+}
