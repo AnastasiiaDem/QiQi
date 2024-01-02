@@ -54,7 +54,7 @@ export default function Footer() {
           </Link>
         </div>
         <p className="text-slate-50 text-center mt-5">
-          © 2023 Qiqi Skincare. Forged in the future.
+          © 2023 QiQi Haircare. Forged in the future.
         </p>
       </footer>
       <div className="flex flex-col items-center mt-20 p-14 max-md:mt-10 max-md:px-5">
